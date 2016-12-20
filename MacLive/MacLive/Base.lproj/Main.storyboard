@@ -774,6 +774,7 @@
                         <outlet property="movieListScollView" destination="i4f-7b-2Hw" id="Lly-Pw-hgP"/>
                         <outlet property="movieListTableView" destination="c1V-gM-ben" id="PJI-Ab-wa7"/>
                         <outlet property="playerView" destination="ndg-ka-CWB" id="gFV-3f-ixe"/>
+                        <outlet property="tableColumn" destination="Rsa-Qb-a1Z" id="gh7-eE-wf7"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
