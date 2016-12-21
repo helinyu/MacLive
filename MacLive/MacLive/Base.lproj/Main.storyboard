@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Application-->
+        <!--Custom Application-->
         <scene sceneID="JPo-4y-FX3">
             <objects>
-                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                <application id="hnw-xV-0zn" customClass="CustomApplication" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
                             <menuItem title="MacLive" id="1Xt-HY-uBw">
@@ -116,6 +116,22 @@
                                             <connections>
                                                 <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
                                             </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Behavior" id="w52-dd-hWS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Behavior" id="OtF-hE-lnc">
+                                    <items>
+                                        <menuItem title="Screen Recorder" keyEquivalent="S" id="gSV-th-Ylf">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Video Recorder" keyEquivalent="V" id="w7t-sV-h0H">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Video Player" keyEquivalent="P" id="E3H-CL-B5c">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
                                         </menuItem>
                                     </items>
                                 </menu>
@@ -677,7 +693,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="69" y="290"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC43A8361E0A9EF800BE2623 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A8341E0A9EF800BE2623 /* AVFoundation.framework */; };
+		DC43A8371E0A9EF800BE2623 /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A8351E0A9EF800BE2623 /* libswiftAVFoundation.tbd */; };
+		DC43A8391E0A9F0100BE2623 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A8381E0A9F0100BE2623 /* AudioToolbox.framework */; };
+		DC43A83D1E0A9F0A00BE2623 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A83A1E0A9F0A00BE2623 /* CoreMedia.framework */; };
+		DC43A83E1E0A9F0A00BE2623 /* CoreMediaIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A83B1E0A9F0A00BE2623 /* CoreMediaIO.framework */; };
+		DC43A83F1E0A9F0A00BE2623 /* libswiftCoreMedia.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A83C1E0A9F0A00BE2623 /* libswiftCoreMedia.tbd */; };
 		DC93B0011E07C7680096E2C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93B0001E07C7680096E2C1 /* AppDelegate.m */; };
 		DC93B0041E07C7680096E2C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93B0031E07C7680096E2C1 /* main.m */; };
 		DC93B0071E07C7680096E2C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC93B0061E07C7680096E2C1 /* ViewController.m */; };
@@ -36,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC43A8301E0A53A100BE2623 /* libScreenReader.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libScreenReader.tbd; path = usr/lib/libScreenReader.tbd; sourceTree = SDKROOT; };
+		DC43A8311E0A53A100BE2623 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		DC43A8341E0A9EF800BE2623 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DC43A8351E0A9EF800BE2623 /* libswiftAVFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftAVFoundation.tbd; path = System/Library/PrivateFrameworks/Swift/libswiftAVFoundation.tbd; sourceTree = SDKROOT; };
+		DC43A8381E0A9F0100BE2623 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DC43A83A1E0A9F0A00BE2623 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		DC43A83B1E0A9F0A00BE2623 /* CoreMediaIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMediaIO.framework; path = System/Library/Frameworks/CoreMediaIO.framework; sourceTree = SDKROOT; };
+		DC43A83C1E0A9F0A00BE2623 /* libswiftCoreMedia.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCoreMedia.tbd; path = System/Library/PrivateFrameworks/Swift/libswiftCoreMedia.tbd; sourceTree = SDKROOT; };
 		DC93AFFC1E07C7680096E2C1 /* MacLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC93AFFF1E07C7680096E2C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC93B0001E07C7680096E2C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC43A83D1E0A9F0A00BE2623 /* CoreMedia.framework in Frameworks */,
+				DC43A83E1E0A9F0A00BE2623 /* CoreMediaIO.framework in Frameworks */,
+				DC43A83F1E0A9F0A00BE2623 /* libswiftCoreMedia.tbd in Frameworks */,
+				DC43A8391E0A9F0100BE2623 /* AudioToolbox.framework in Frameworks */,
+				DC43A8361E0A9EF800BE2623 /* AVFoundation.framework in Frameworks */,
+				DC43A8371E0A9EF800BE2623 /* libswiftAVFoundation.tbd in Frameworks */,
 				DC93B0391E07D0660096E2C1 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +102,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC43A8401E0A9F3B00BE2623 /* VideoRecorder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VideoRecorder;
+			sourceTree = "<group>";
+		};
 		DC93AFF31E07C7680096E2C1 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +133,7 @@
 		DC93AFFE1E07C7680096E2C1 /* MacLive */ = {
 			isa = PBXGroup;
 			children = (
+				DC43A8401E0A9F3B00BE2623 /* VideoRecorder */,
 				DC93AFFF1E07C7680096E2C1 /* AppDelegate.h */,
 				DC93B0001E07C7680096E2C1 /* AppDelegate.m */,
 				DC93B0051E07C7680096E2C1 /* ViewController.h */,
@@ -165,6 +193,14 @@
 		DC93B0371E07D0660096E2C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC43A83A1E0A9F0A00BE2623 /* CoreMedia.framework */,
+				DC43A83B1E0A9F0A00BE2623 /* CoreMediaIO.framework */,
+				DC43A83C1E0A9F0A00BE2623 /* libswiftCoreMedia.tbd */,
+				DC43A8381E0A9F0100BE2623 /* AudioToolbox.framework */,
+				DC43A8341E0A9EF800BE2623 /* AVFoundation.framework */,
+				DC43A8351E0A9EF800BE2623 /* libswiftAVFoundation.tbd */,
+				DC43A8301E0A53A100BE2623 /* libScreenReader.tbd */,
+				DC43A8311E0A53A100BE2623 /* ScreenSaver.framework */,
 				DC93B0381E07D0660096E2C1 /* AVKit.framework */,
 			);
 			name = Frameworks;
@@ -450,6 +486,10 @@
 				DEVELOPMENT_TEAM = D2XBEJ6876;
 				INFOPLIST_FILE = MacLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dtspread.apps.MacLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -463,6 +503,10 @@
 				DEVELOPMENT_TEAM = D2XBEJ6876;
 				INFOPLIST_FILE = MacLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dtspread.apps.MacLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -541,6 +585,7 @@
 				DC93B0281E07C7680096E2C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC93B0291E07C7680096E2C1 /* Build configuration list for PBXNativeTarget "MacLiveTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +594,7 @@
 				DC93B02B1E07C7680096E2C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC93B02C1E07C7680096E2C1 /* Build configuration list for PBXNativeTarget "MacLiveUITests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +603,7 @@
 				DC93B02E1E07C7680096E2C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

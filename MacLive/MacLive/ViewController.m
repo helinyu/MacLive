@@ -11,20 +11,31 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PlayerService.h"
 #import <AppKit/AppKit.h>
-
+#import <ScreenSaver/ScreenSaver.h>
+#import <ScreenSaver/ScreenSaverDefaults.h>
 
 @interface ViewController()<NSTableViewDelegate,NSTableViewDataSource>
 {
     NSMutableArray *_dataSourceList;
+    
+/// video recorder and player so on
+    AVCaptureSession  *_captureSession;
+    AVCaptureDeviceInput *_captureDeviceInput;
+    AVCaptureMovieFileOutput *_movieFileOutput;
+    AVCaptureVideoPreviewLayer *_previewLayer;
+    
+    
 }
 // IBOutlet
 @property (weak) IBOutlet AVPlayerView *playerView;
-
 @property (weak) IBOutlet NSScrollView *movieListScollView;
 @property (weak) IBOutlet NSTableView *movieListTableView;
 @property (weak) IBOutlet NSTableColumn *tableColumn;
-
 @property (strong, nonatomic) PlayerService *playerService;
+
+// 这个是屏幕保护（）
+//@property (strong, nonatomic) ScreenSaverView *screenSaverView;
+//@property (strong, nonatomic) ScreenSaverDefaults* screenSaverDefaults;
 
 @end
 
@@ -40,7 +51,44 @@
     for (NSInteger index = 0; index < 30; index ++ ) {
         [_dataSourceList addObject:[NSString stringWithFormat:@"http://localhost:8000/movie/test%ld.mp4",(long)index%3]];
     }
+    
+   NSArray *arrays = [[NSApp mainMenu] itemArray];
+    NSMenu *subMenu = [[arrays objectAtIndex:2] submenu];
+    NSArray *items = [subMenu itemArray];
+    for (NSInteger index = 0;  index<items.count; index++) {
+        NSMenuItem *menuItem = items[index];
+        menuItem.enabled = true;
+        menuItem.tag = index;
+        [menuItem setTarget:self];
+        [menuItem setAction:@selector(onBehaviorClicked:)];
+    }
+    
+}
 
+- (void)onBehaviorClicked:(NSMenuItem*)menuItem {
+    NSLog(@"menuItem is ; %ld",menuItem.tag);
+    switch (menuItem.tag) {
+        case 0:
+        {
+            NSLog(@"tag 0");
+        }
+            break;
+        case 1:
+            NSLog(@"tag 1");
+            
+            
+            
+            break;
+        case 2:
+            NSLog(@"tag 2");
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)copyAction:(NSMenuItem*)item {
+    NSLog(@"clicked");
 }
 
 - (BOOL)configureAPlayer:(NSInteger)index {
@@ -52,8 +100,6 @@
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
 }
 
 #pragma mark -- table datasource
@@ -112,5 +158,7 @@
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSLog(@"select notification : %@",notification);
 }
+
+
 
 @end
