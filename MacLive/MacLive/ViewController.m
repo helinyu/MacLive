@@ -13,6 +13,7 @@
 #import <AppKit/AppKit.h>
 #import <ScreenSaver/ScreenSaver.h>
 #import <ScreenSaver/ScreenSaverDefaults.h>
+#import "VideoRecorderController.h"
 
 @interface ViewController()<NSTableViewDelegate,NSTableViewDataSource>
 {
@@ -23,8 +24,6 @@
     AVCaptureDeviceInput *_captureDeviceInput;
     AVCaptureMovieFileOutput *_movieFileOutput;
     AVCaptureVideoPreviewLayer *_previewLayer;
-    
-    
 }
 // IBOutlet
 @property (weak) IBOutlet AVPlayerView *playerView;
@@ -33,10 +32,6 @@
 @property (weak) IBOutlet NSTableColumn *tableColumn;
 @property (strong, nonatomic) PlayerService *playerService;
 
-// 这个是屏幕保护（）
-//@property (strong, nonatomic) ScreenSaverView *screenSaverView;
-//@property (strong, nonatomic) ScreenSaverDefaults* screenSaverDefaults;
-
 @end
 
 @implementation ViewController
@@ -44,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 视频播放处理
     self.tableColumn.title = @"视频列表";
     self.tableColumn.identifier = @"vedio list";
     //test
@@ -52,7 +48,7 @@
         [_dataSourceList addObject:[NSString stringWithFormat:@"http://localhost:8000/movie/test%ld.mp4",(long)index%3]];
     }
     
-   NSArray *arrays = [[NSApp mainMenu] itemArray];
+    NSArray *arrays = [[NSApp mainMenu] itemArray];
     NSMenu *subMenu = [[arrays objectAtIndex:2] submenu];
     NSArray *items = [subMenu itemArray];
     for (NSInteger index = 0;  index<items.count; index++) {
@@ -62,6 +58,11 @@
         [menuItem setTarget:self];
         [menuItem setAction:@selector(onBehaviorClicked:)];
     }
+    
+    // 视频录制初始化
+    
+    
+    
     
 }
 
@@ -74,10 +75,10 @@
         }
             break;
         case 1:
+        {
             NSLog(@"tag 1");
-            
-            
-            
+            VideoRecorderController *vc = [[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:NSStringFromClass([VideoRecorderController class])];
+        }
             break;
         case 2:
             NSLog(@"tag 2");

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0305F41E0BE8EF003C785E /* VideoRecorderController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0305F31E0BE8EF003C785E /* VideoRecorderController.m */; };
 		DC43A8361E0A9EF800BE2623 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A8341E0A9EF800BE2623 /* AVFoundation.framework */; };
 		DC43A8371E0A9EF800BE2623 /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A8351E0A9EF800BE2623 /* libswiftAVFoundation.tbd */; };
 		DC43A8391E0A9F0100BE2623 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC43A8381E0A9F0100BE2623 /* AudioToolbox.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC0305F21E0BE8EF003C785E /* VideoRecorderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecorderController.h; sourceTree = "<group>"; };
+		DC0305F31E0BE8EF003C785E /* VideoRecorderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRecorderController.m; sourceTree = "<group>"; };
 		DC43A8301E0A53A100BE2623 /* libScreenReader.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libScreenReader.tbd; path = usr/lib/libScreenReader.tbd; sourceTree = SDKROOT; };
 		DC43A8311E0A53A100BE2623 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
 		DC43A8341E0A9EF800BE2623 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,8 @@
 		DC43A8401E0A9F3B00BE2623 /* VideoRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				DC0305F21E0BE8EF003C785E /* VideoRecorderController.h */,
+				DC0305F31E0BE8EF003C785E /* VideoRecorderController.m */,
 			);
 			path = VideoRecorder;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC93B0071E07C7680096E2C1 /* ViewController.m in Sources */,
+				DC0305F41E0BE8EF003C785E /* VideoRecorderController.m in Sources */,
 				DC93B0041E07C7680096E2C1 /* main.m in Sources */,
 				DC93B0011E07C7680096E2C1 /* AppDelegate.m in Sources */,
 				DC93B0361E07CCBD0096E2C1 /* PlayerService.m in Sources */,
